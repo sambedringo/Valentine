@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💖</title>
+  <style>
+    body {
+      background-color: #ffe6eb;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .envelope {
+      width: 320px;
+      height: 220px;
+      background: #ff8fa3;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+
+    .envelope button {
+      margin-top: 15px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 20px;
+      background: white;
+      color: #ff4d6d;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .letter {
+      display: none;
+      width: 380px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .letter h2 {
+      color: #ff4d6d;
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .photos img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      background: #e63956;
+    }
+
+    .love-message {
+      display: none;
+      font-size: 22px;
+      color: #ff4d6d;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Closed Letter -->
+  <div class="envelope" id="envelope">
+    <h2>💌 A Letter For You</h2>
+    <button onclick="openLetter()">Open</button>
+  </div>
+
+  <!-- Opened Letter -->
+  <div class="letter" id="letter">
+    <h2>My Ishuu ❤️</h2>
+
+    <p>
+      We started as friends, but somewhere along the way
+      you became my favorite person.
+    </p>
+
+    <!-- YOUR PICS -->
+    <div class="photos">
+      <img src="pic1.jpg" alt="Us">
+      <img src="pic2.jpg" alt="Us">
+      <img src="pic3.jpg" alt="Us">
+    </div>
+
+    <p>
+      I don’t want to change what we have,
+      I just want to add love to it…
+    </p>
+
+    <h3>Will you be my Monica to my Chandler? 💖</h3>
+
+    <div class="buttons">
+      <button onclick="sayLove()">Yes 💕</button>
+      <button onclick="sayLove()">100% Yes 😘</button>
+    </div>
+
+    <div class="love-message" id="love">
+      YAYAA 💖<br>
+      I love you Ishuu 🥹❤️
+    </div>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.getElementById("envelope").style.display = "none";
+      document.getElementById("letter").style.display = "block";
+    }
+
+    function sayLove() {
+      document.querySelector(".buttons").style.display = "none";
+      document.getElementById("love").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
